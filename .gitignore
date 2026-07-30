@@ -1,0 +1,43 @@
+# Data — large files go to GitHub Releases
+data/**
+!data/**/
+!data/**/.gitkeep
+!data/annotations/*.csv
+!data/annotations/*.md
+!data/processed/signal_weights.csv
+!data/processed/eda_findings.csv
+!data/processed/deletion_log.csv
+!data/processed/subcategory_audit_queue.csv
+!data/raw/sample_catalog.csv
+
+# Trained models
+models/**
+!models/.gitkeep
+*.pkl
+*.joblib
+*.faiss
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+
+# Tooling
+.pytest_cache/
+.coverage
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Secrets
+.env
+!.env.example
+
+# OS / IDE
+.DS_Store
+.idea/
+.vscode/
