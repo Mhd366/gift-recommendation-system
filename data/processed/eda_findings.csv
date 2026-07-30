@@ -1,0 +1,13 @@
+﻿finding,action for the modelling team,priority
+Price is heavily right-skewed,Use log(price) or the ordinal price_band; never raw price in a distance metric,high
+Price scale differs by category,"Normalise price fit within category, not globally",high
+Category sizes are highly unequal,Macro-average all metrics; apply class weights; cap results per category,high
+Two occasion labels are near-universal,Multiply every occasion match by its inverse-frequency weight,critical
+"Occasion labels are rule-derived, not observed",Do not train a model on them and evaluate against them; that is circular,critical
+Description is template-generated,Exclude it from text features; embed product_name instead,critical
+Catalogue is bilingual,Use a multilingual encoder and fold Arabic letter variants,high
+source_site correlates with category and price,Exclude source_site as a model feature; keep it for bias reporting only,critical
+Age-gender and category-budget grids contain thin cells,"Evaluate per cell; relax category on fallback, never budget or age",high
+Sub-category is unverifiable for many products,"Use subcategory_confidence to demote, never to delete or relabel",medium
+A share of products has no image,Read image_display_url only; demote placeholder products in ranking,medium
+Products group into parent and options,Rank parent products; resolve options at the interface layer,high
