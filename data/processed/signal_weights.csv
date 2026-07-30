@@ -1,0 +1,26 @@
+﻿label,axis,coverage_%,idf_weight
+Gardening & Nature,interest,1.2,4.433
+Fragrance,interest,3.2,3.43
+Technology,interest,3.5,3.361
+Outdoors & Travel,interest,3.8,3.264
+Art & Creativity,interest,3.9,3.236
+Reading & Learning,interest,4.1,3.193
+Home & Interiors,interest,5.2,2.953
+Cooking & Food,interest,5.7,2.872
+Wellness,interest,6.4,2.743
+Sports & Fitness,interest,6.6,2.714
+Beauty & Grooming,interest,12.1,2.114
+Kids & Play,interest,13.9,1.972
+Jewellery & Watches,interest,15.3,1.876
+Gaming,interest,17.6,1.735
+Fashion & Style,interest,19.3,1.644
+Housewarming,occasion,5.7,2.863
+ThankYou,occasion,13.1,2.033
+FathersDay,occasion,13.8,1.977
+NewBaby,occasion,14.2,1.952
+Wedding,occasion,20.8,1.569
+Anniversary,occasion,22.9,1.474
+MothersDay,occasion,32.5,1.123
+Graduation,occasion,56.5,0.571
+Birthday,occasion,98.4,0.017
+Eid,occasion,99.2,0.008
