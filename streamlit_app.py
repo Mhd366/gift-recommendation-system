@@ -234,7 +234,7 @@ with right:
                 with cols[offset]:
                     product_card(item, start + offset + 1)
     else:
-        st.info("Complete the profile and select "Find thoughtful gifts" to reveal the collection.")
+        st.info('Complete the profile and select "Find thoughtful gifts" to reveal the collection.')
 
 st.divider()
 st.caption(
