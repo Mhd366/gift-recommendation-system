@@ -1,0 +1,10 @@
+data/raw/*.csv
+data/processed/catalog_clean.csv
+data/processed/catalog_offers.csv
+models/*.joblib
+__pycache__/
+.venv/
+venv/
+.ipynb_checkpoints/
+.DS_Store
+.env

@@ -1,0 +1,4 @@
+﻿reason,rows_deleted,justification
+missing price,653,hard constraint; cannot be imputed
+zero / free price,417,a free item is not a gift
+above price ceiling,141,"outside any gift budget (> 50,000)"
