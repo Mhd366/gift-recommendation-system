@@ -72,7 +72,7 @@ def load_engine():
     sys.path.insert(0, str(ROOT))
 
     import joblib
-    artifact = joblib.load(ROOT / "models" / "gift_recommender_v3.joblib")
+    artifact = joblib.load(Path("/mount/src/gift-recommendation-system/models/gift_recommender_v3.joblib"))
     return artifact["recommender"], artifact["metadata"], artifact.get("cluster_names", {})
 
 
