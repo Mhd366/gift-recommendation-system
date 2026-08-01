@@ -15,3 +15,12 @@ data/raw/catalog_raw.csv
 data/processed/catalog_clean.csv
 data/processed/catalog_offers.csv
 models/*.joblib
+__pycache__/
+*.pyc
+api/exposure.py
+api/gift_engine.py
+api/text_block.py
+data/raw/
+data/processed/catalog_clean.csv
+data/processed/catalog_offers.csv
+models/*.joblib
