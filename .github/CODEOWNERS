@@ -1,0 +1,18 @@
+# Data & EDA
+/data/                          @DATA_MEMBER
+/notebooks/01_data_cleaning.ipynb  @DATA_MEMBER
+/notebooks/02_eda.ipynb            @DATA_MEMBER
+/reports/                       @DATA_MEMBER
+/configs/taxonomy.yaml          @DATA_MEMBER
+/src/gift_recommender/preprocessing/  @DATA_MEMBER
+/src/gift_recommender/labeling/       @DATA_MEMBER
+
+# Modelling
+/models/                        @ML_MEMBER
+/notebooks/03_modeling.ipynb    @ML_MEMBER
+/src/gift_recommender/recommendation/ @ML_MEMBER
+/src/gift_recommender/evaluation/     @ML_MEMBER
+
+# API & frontend
+/api/                           @API_MEMBER
+/app/                           @API_MEMBER
