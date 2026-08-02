@@ -32,7 +32,7 @@ logger = logging.getLogger("gift_api")
 
 # ── absolute paths so the server can be launched from any working directory ──
 _ROOT         = _HERE.parent
-ARTIFACT_PATH = _ROOT / "models" / "gift_recommender_v3.joblib"
+ARTIFACT_PATH = _ROOT / "models" / "gift_recommender_v4.joblib"
 OFFERS_PATH   = _ROOT / "data" / "processed" / "catalog_offers.csv"
 EXPOSURE_ENABLED = False
 
@@ -76,7 +76,7 @@ async def lifespan(app: FastAPI):
 
 app = FastAPI(
     title="Gift Recommender API",
-    version="3.0.0",
+    version="4.0.0",
     description=(
         "Context-aware gift recommendation. Age and budget are hard "
         "constraints and are never violated."
@@ -170,11 +170,15 @@ def options() -> dict[str, list[str]]:
 @app.get("/metrics")
 def metrics() -> dict[str, Any]:
     meta = STATE["metadata"]
-    return {"precision_at_5": meta.get("precision_at_5"),
-            "ndcg_at_10":     meta.get("ndcg_at_10"),
-            "n_items":        meta.get("n_items"),
-            "n_features":     meta.get("n_features"),
-            "clusters":       meta.get("k")}
+    return {"precision_at_5":        meta.get("precision_at_5"),
+            "ndcg_at_10":            meta.get("ndcg_at_10"),
+            "n_items":               meta.get("n_items"),
+            "n_features_ranking":    meta.get("n_features_ranking",
+                                              meta.get("n_features")),
+            "n_features_clustering": meta.get("n_features_structural"),
+            "clusters":              meta.get("k"),
+            "silhouette":            meta.get("silhouette"),
+            "davies_bouldin":        meta.get("davies_bouldin")}
 
 
 @app.post("/recommend")
